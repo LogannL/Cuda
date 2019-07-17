@@ -1,0 +1,25 @@
+.centered-form {
+    background:#333333;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 24px;
+}
+
+.centered-form__box {
+    box-shadow:0 0 3px 1px #1D1F26;
+    background:#F7F7FA;
+    padding:24px;
+    width:400px
+}
+
+.centered-form button {
+    width:100%;
+}
+
+.centered-form input { 
+    border: 1px solid #cccccc;
+    padding: 8px;
+    margin-bottom:16px;
+    width:100%;
+}
