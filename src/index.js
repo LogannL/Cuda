@@ -2,13 +2,14 @@ const express = require('express');
 const hbs = require('hbs');
 const http = require('http');
 const path = require('path');
+const bodyParser = require('body-parser');
 require('../db/mongoose');
 
 // GET CUSTOMS LABELS
 const customlabels = require('./utils/labels');
 
 // GET ROUTES
-const accountRouter = require('./routers/account');
+const accountRouter = require('./routers/accountMgr');
 
 // INIT SERVER
 const app = express();
@@ -16,6 +17,7 @@ const app = express();
 // APP USE
 app.use(express.json());
 app.use(accountRouter);
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const server = http.createServer(app);
 
